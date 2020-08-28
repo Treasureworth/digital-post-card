@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E8EAED;
+  background-image: url(https://descasio.com/wp-content/uploads/2018/06/descasio-logo-new-no-bg-copy.png) no-repeat;
+}
+
