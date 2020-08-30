@@ -190,15 +190,11 @@ function App() {
             <span style={{fontSize: 36}}>T</span>
             <span style={{fontSize: 12}}>Add Text</span>         
           </div>
-      <div className="add-text cursor" style={{marginTop: 50}} onClick={() => {setSelectedMenu("image");
-                                                                              dispatch(actionMethods.addPhotos())
-                                                                              }}>
+      <div className="add-text cursor" style={{marginTop: 50}} onClick={() => setSelectedMenu("image")}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 5H4v14l9.292-9.294a1 1 0 0 1 1.414 0L20 15.01V5zM2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="rgba(255,255,255,1)"/></svg>
         <span style={{fontSize: 12, marginTop: 5}}> Add Image</span>
       </div>
-      <div className="add-text cursor" style={{marginTop: 50}} onClick={() => {setSelectedMenu("background");
-                                                                              dispatch(actionMethods.addPhotos())
-                                                                              }}>
+      <div className="add-text cursor" style={{marginTop: 50}} onClick={() => setSelectedMenu("background")}>
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.522 0 10 3.978 10 8.889a5.558 5.558 0 0 1-5.556 5.555h-1.966c-.922 0-1.667.745-1.667 1.667 0 .422.167.811.422 1.1.267.3.434.689.434 1.122C13.667 21.256 12.9 22 12 22 6.478 22 2 17.522 2 12S6.478 2 12 2zm-1.189 16.111a3.664 3.664 0 0 1 3.667-3.667h1.966A3.558 3.558 0 0 0 20 10.89C20 7.139 16.468 4 12 4a8 8 0 0 0-.676 15.972 3.648 3.648 0 0 1-.513-1.86zM7.5 12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM12 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="rgba(255,255,255,1)"/></svg>
         <span style={{fontSize: 12, textAlign: "center", marginTop: 5}}> Change Background Color</span>
       </div>
@@ -207,7 +203,7 @@ function App() {
       <div className="side-menu-content">
           {
             selectedMenu === "text"? <><p>Click on "Add Text Menu to place text on your postcard</p><p>Double click a text to edit it's content.</p> <p>Press the return key to end editting mode.</p> <p>Click on a text to style it.</p></>:
-            selectedMenu === "background"?<> <p>Click to pick Postcard Background Color </p> <input className="background-image" type="color" onChange={(value) => setBackgroundColor(value.target.value)}/></>:
+            selectedMenu === "background"?<> <p>Click to pick Postcard Background Color </p> <input className="background-image" type="color" onChange={(value) => setBackgroundColor(value.target.value)}/></>:selectedMenu === "image"?
             <ImageUploadComponent onDragMethod={ImageDragFunction}/>
           }
           <div style={{display: 'flex',
