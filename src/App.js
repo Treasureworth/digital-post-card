@@ -204,7 +204,7 @@ function App() {
           {
             selectedMenu === "text"? <><p>Click on "Add Text Menu to place text on your postcard</p><p>Double click a text to edit it's content.</p> <p>Press the return key to end editting mode.</p> <p>Click on a text to style it.</p></>:
             selectedMenu === "background"?<> <p>Click to pick Postcard Background Color </p> <input className="background-image" type="color" onChange={(value) => setBackgroundColor(value.target.value)}/></>:selectedMenu === "image"?
-            <ImageUploadComponent onDragMethod={ImageDragFunction}/>
+            <ImageUploadComponent onDragMethod={ImageDragFunction}/>: ""
           }
           <div style={{display: 'flex',
                         flexDirection: 'column',
